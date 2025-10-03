@@ -1,0 +1,4 @@
+# Core Google AI library for accessing Gemini models
+google-generativeai
+python-dotenv
+google-adk
