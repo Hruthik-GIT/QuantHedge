@@ -1,0 +1,29 @@
+- test_name: "High_Risk_Scenario_Empty_Portfolio"
+  inputs:
+    portfolio:
+      cash: 100000.0
+      stocks: {}
+    market_conditions: # This will be used to mock the IngestionAgent's output
+      vix: 55.0
+      sentiment: "negative"
+      sp500_performance": -0.04
+
+- test_name: "Low_Risk_Scenario_Existing_Holdings"
+  inputs:
+    portfolio:
+      cash: 50000.0
+      stocks: {"AAPL": 100, "MSFT": 50}
+    market_conditions:
+      vix: 15.0
+      sentiment: "positive"
+      sp500_performance": 0.01
+
+- test_name: "Neutral_Scenario_High_Cash"
+  inputs:
+    portfolio:
+      cash: 500000.0
+      stocks: {"SPY": 200}
+    market_conditions:
+      vix: 22.0
+      sentiment: "neutral"
+      sp500_performance": 0.0
